@@ -1,12 +1,21 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
-
+import {useNavigation} from '@react-navigation/native';
 import { styles } from "./styles";
 import illustrationImg from "../../assets/illustration.png";
 import { ButtonIcon } from "../../components/ButtonIcon/ButtonIcon";
 import { Background } from "../../components/Background";
 
+
+
 export const SingnIn: React.FC = () => {
+const navigation = useNavigation();
+
+  function handleSignIn(){
+    navigation.navigate("Home");
+  }
+
+  
   return (
     <Background>
       <View style={styles.container}>
@@ -23,7 +32,10 @@ export const SingnIn: React.FC = () => {
           <Text style={styles.subtitle}>
             Crie grupos para jogar seus games {`\n`} favoritos com seus amigos
           </Text>
-          <ButtonIcon title="Entrar com Discord" />
+          <ButtonIcon 
+          title="Entrar com Discord" 
+          onPress={handleSignIn}
+          />
         </View>
       </View>
     </Background>

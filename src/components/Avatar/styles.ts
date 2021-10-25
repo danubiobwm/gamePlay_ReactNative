@@ -3,8 +3,8 @@ import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
   container:{
-    width: 48,
-    height: 48,
+    width: 50,
+    height: 50,
     borderRadius: 8,
     alignItems: 'center',
     justifyContent: 'center',
@@ -12,7 +12,8 @@ export const styles = StyleSheet.create({
   },
 
   avatar:{
-    width: 48,
-    height: 48,
+    width: 46,
+    height: 46,
+    borderRadius: 8
   }
 });

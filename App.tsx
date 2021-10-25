@@ -8,9 +8,9 @@ import {
 } from "@expo-google-fonts/rajdhani";
 import AppLoading from "expo-app-loading";
 
-import { Home } from "./src/screens/Home";
-//import { SingnIn } from "./src/screens/SingnIn";
+import { Routes } from "./src/routes";
 import { StatusBar } from "react-native";
+import { Background } from "./src/components/Background";
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -25,13 +25,13 @@ export default function App() {
   }
 
   return (
-    <>
+    <Background>
       <StatusBar
         barStyle="light-content"
         backgroundColor="transparent"
         translucent
       />
-      <Home />
-    </>
+      <Routes />
+    </Background>
   );
 }
