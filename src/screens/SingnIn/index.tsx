@@ -12,7 +12,7 @@ export const SingnIn: React.FC = () => {
 const navigation = useNavigation();
 
   function handleSignIn(){
-    navigation.navigate("Home");
+    navigation.navigate('Home');
   }
 
   

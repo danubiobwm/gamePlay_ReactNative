@@ -7,7 +7,7 @@ import { styles } from "./styles";
 
 
 export function GuildIcon() {
-  const uri = 'https://w7.pngwing.com/pngs/705/535/png-transparent-computer-icons-discord-logo-discord-icon-rectangle-logo-smiley-thumbnail.png'
+  const uri = 'https://logodownload.org/wp-content/uploads/2017/11/discord-logo-0-140x140.png'
   return (
     <Image 
     source={{uri}}
