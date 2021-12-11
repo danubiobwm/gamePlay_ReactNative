@@ -1,19 +1,35 @@
-import React from "react";
-import { Image } from "react-native";
+import React from 'react';
+import { Image, View } from 'react-native';
 
-import { styles } from "./styles";
+import { styles } from './styles';
+import DiscordSvg from '../../assets/discord.svg';
 
+const { CDN_IMAGE } = process.env;
 
+type Props = {
+  guildId: string;
+  iconId: string | null;
+}
 
+export function GuildIcon({ guildId, iconId }: Props) {
+  const uri = `${CDN_IMAGE}/icons/${guildId}/${iconId}.png`;
 
-export function GuildIcon() {
-  const uri = 'https://logodownload.org/wp-content/uploads/2017/11/discord-logo-0-140x140.png'
   return (
-    <Image 
-    source={{uri}}
-    style={styles.image}
-    resizeMode="cover"
-    />
-    
-  );
+    <View style={styles.container}>
+      {  
+        iconId ?    
+        <Image 
+          source={{ uri }}
+          style={styles.image}
+          resizeMode="cover"    
+        />
+        :
+        <DiscordSvg 
+          width={40} 
+          height={40}
+        />
+      }
+    </View>
+  )
+
 }
